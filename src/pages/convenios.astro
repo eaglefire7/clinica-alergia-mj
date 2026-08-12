@@ -1,0 +1,61 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import MapaSection from '../components/MapaSection.astro';
+import Footer from '../components/Footer.astro';
+
+const whatsappLink = "https://wa.me/message/IE4QW2RRY3PZC1";
+
+// Cada arquivo contem 2 logos empilhados (topo + base) na mesma imagem.
+const convenios = [
+  { arquivos: "amafrerj.png", nome: "AMAFRERJ e Caberj Saúde" },
+  { arquivos: "amil.png", nome: "Amil e CAMARJ" },
+  { arquivos: "bc-saude.png", nome: "BC Saúde e CASSI" },
+  { arquivos: "bradesco-saude.png", nome: "Bradesco Saúde e GEAP Saúde" },
+  { arquivos: "golden-cross.png", nome: "Golden Cross e Grupo NotreDame Intermédica" },
+  { arquivos: "ipalerj-saude.png", nome: "IPALERJ Saúde e PASA" },
+  { arquivos: "mediservice.png", nome: "Mediservice e Porto Seguro Saúde" },
+  { arquivos: "mutua.png", nome: "Mútua e Prevent Senior" },
+  { arquivos: "saude-caixa.png", nome: "Saúde Caixa e Unimed" },
+  { arquivos: "sulamerica-saude.png", nome: "SulAmérica Saúde e Vale" },
+];
+---
+
+<Layout title="Convênios | Clínica de Alergia Dr. Mauro Jorge">
+  <Header />
+
+  <section class="bg-gradient-to-b from-[#F7F3EC] to-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-[#1F3A3D] text-center mb-4">Convênios</h1>
+      <p class="text-center text-[#2B2B2B]/70 max-w-xl mx-auto mb-8">
+        Com o objetivo de melhor atender nossos pacientes, trabalhamos com as principais operadoras de saúde:
+      </p>
+      <div class="h-[3px] bg-[#3E7C5A] w-full max-w-4xl mx-auto mb-16"></div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-x-8 gap-y-10 mb-16">
+        {convenios.map((c) => (
+          <div class="flex items-center justify-center">
+            <img
+              src={`/images/convenios/${c.arquivos}`}
+              alt={c.nome}
+              class="max-w-full h-auto transition-transform duration-300 hover:scale-110"
+            />
+          </div>
+        ))}
+      </div>
+
+      <div class="max-w-md mx-auto text-center">
+        <div class="bg-[#F0EEE9] rounded-t-xl px-6 py-4">
+          <p class="font-serif text-lg font-semibold text-[#1F3A3D]">Atendimento por Convênio e Particular</p>
+        </div>
+        <a href={whatsappLink} target="_blank" class="block bg-[#1F3A3D] text-white font-medium py-4 rounded-b-xl hover:bg-[#16292b] transition">
+          Agende Aqui
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <MapaSection />
+
+  <Footer />
+</Layout>

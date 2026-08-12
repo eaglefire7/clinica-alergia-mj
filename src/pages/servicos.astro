@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import MapaSection from '../components/MapaSection.astro';
+import Footer from '../components/Footer.astro';
+
+const whatsappLink = "https://wa.me/message/IE4QW2RRY3PZC1";
+
+const grupoConsultas = [
+  {
+    imagem: "/images/servicos/consultas-1.jpg",
+    alt: "Paciente usando bombinha de asma",
+    itens: ["Alergia a picada de Insetos", "Alergia Alimentar", "Alergia Medicamentosa", "Asma"],
+  },
+  {
+    imagem: "/images/servicos/consultas-2.jpg",
+    alt: "Pele com dermatite",
+    itens: ["Conjuntivite Alérgica", "Dermatite Atópica", "Dermatite de Contato", "Infecções de Repetição (Herpes, Candidíase, entre outras)"],
+  },
+  {
+    imagem: "/images/servicos/consultas-3.jpg",
+    alt: "Paciente espirrando",
+    itens: ["Rinite", "Sinusite", "Urticária"],
+  },
+];
+
+const grupoTestes = [
+  {
+    imagem: "/images/servicos/testes-1.jpg",
+    alt: "Teste cutâneo no braço",
+    itens: ["Testes cutâneos de leitura imediata (Inalantes, Alimentos, Insetos)"],
+  },
+  {
+    imagem: "/images/servicos/testes-2.jpg",
+    alt: "Teste de contato nas costas",
+    itens: ["Testes de Contato", "Testes Intradérmicos (Avaliação de imunidade celular)"],
+  },
+];
+---
+
+<Layout title="Serviços | Clínica de Alergia Dr. Mauro Jorge">
+  <Header />
+
+  <section class="bg-gradient-to-b from-[#F7F3EC] to-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h1 class="font-serif text-4xl sm:text-5xl font-bold text-[#1F3A3D] text-center mb-4">Serviços</h1>
+      <div class="h-[3px] bg-[#3E7C5A] w-full max-w-4xl mx-auto mb-16"></div>
+
+      <div id="consultas" class="scroll-mt-24 mb-20">
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-[#1F3A3D] text-center">Consultas Médicas em Alergia e Imunologia</h2>
+        <p class="text-center text-[#2B2B2B]/60 mb-10">Exemplos de doenças tratadas</p>
+
+        <div class="grid sm:grid-cols-3 gap-8">
+          {grupoConsultas.map((grupo) => (
+            <div class="text-center">
+              <img src={grupo.imagem} alt={grupo.alt} class="w-full h-64 object-cover rounded-2xl shadow-sm mb-4" />
+              <ul class="text-[#1F3A3D]/80 text-sm space-y-2">
+                {grupo.itens.map((item) => (
+                  <li>- {item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div id="testes" class="scroll-mt-24 mb-20">
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-[#1F3A3D] text-center mb-10">Testes Imunoalérgicos</h2>
+
+        <div class="grid sm:grid-cols-2 gap-8 max-w-3xl mx-auto">
+          {grupoTestes.map((grupo) => (
+            <div class="text-center">
+              <img src={grupo.imagem} alt={grupo.alt} class="w-full h-56 object-cover rounded-2xl shadow-sm mb-4" />
+              <ul class="text-[#1F3A3D]/80 text-sm space-y-2">
+                {grupo.itens.map((item) => (
+                  <li>- {item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div id="vacinas" class="scroll-mt-24 mb-16">
+        <h2 class="font-serif text-2xl sm:text-3xl font-semibold text-[#1F3A3D] text-center mb-10">
+          Imunoterapia específica<br />para alérgenos
+        </h2>
+
+        <div class="max-w-xs mx-auto text-center">
+          <img src="/images/servico-vacinas.jpeg" alt="Vacinas para Alergia" class="w-full h-56 object-cover rounded-2xl shadow-sm mb-4" />
+          <p class="text-[#1F3A3D]/80 text-sm">- Vacinas para Alergia</p>
+        </div>
+      </div>
+
+      <div class="max-w-md mx-auto text-center">
+        <div class="bg-[#F0EEE9] rounded-t-xl px-6 py-4">
+          <p class="font-serif text-lg font-semibold text-[#1F3A3D]">Atendimento por Convênio e Particular</p>
+        </div>
+        <a href={whatsappLink} target="_blank" class="block bg-[#1F3A3D] text-white font-medium py-4 rounded-b-xl hover:bg-[#16292b] transition">
+          Agende Aqui
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <MapaSection />
+
+  <Footer />
+</Layout>
