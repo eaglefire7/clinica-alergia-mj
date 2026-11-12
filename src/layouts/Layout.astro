@@ -4,9 +4,100 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  canonicalURL?: string;
 }
 
-const { title, description = "Clínica de Alergia Dr. Mauro Jorge - Copacabana, Rio de Janeiro" } = Astro.props;
+const {
+  title,
+  description = "Clínica de Alergia Dr. Mauro Jorge - Especialista em Alergia e Imunologia em Copacabana, Zona Sul do Rio de Janeiro. Testes alérgicos (Prick Test), imunoterapia e tratamento de rinite, asma e dermatite.",
+  canonicalURL = Astro.url.href
+} = Astro.props;
+
+const siteUrl = "https://[PREENCHER-USUARIO].github.io/[PREENCHER-REPOSITORIO]/";
+
+const geoSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["MedicalClinic", "Physician"],
+      "@id": `${siteUrl}#clinic`,
+      "name": "Clínica de Alergia Dr. Mauro Jorge",
+      "description": description,
+      "url": siteUrl,
+      "telephone": "+55-21-[PREENCHER-TELEFONE]",
+      "medicalSpecialty": "AllergyAndImmunology",
+      "priceRange": "$$",
+      "founder": {
+        "@type": "Person",
+        "name": "Dr. Mauro Jorge",
+        "jobTitle": "Médico Alergista e Imunologista",
+        "identifier": "CRM-RJ [PREENCHER-CRM] / RQE [PREENCHER-RQE]"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "[PREENCHER-RUA-NUMERO-SALA]",
+        "addressLocality": "Rio de Janeiro",
+        "addressRegion": "RJ",
+        "postalCode": "[PREENCHER-CEP]",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        { "@type": "Neighborhood", "name": "Copacabana" },
+        { "@type": "Neighborhood", "name": "Ipanema" },
+        { "@type": "Neighborhood", "name": "Leblon" },
+        { "@type": "Neighborhood", "name": "Botafogo" },
+        { "@type": "Neighborhood", "name": "Leme" },
+        { "@type": "City", "name": "Rio de Janeiro" }
+      ],
+      "availableService": [
+        {
+          "@type": "MedicalTest",
+          "name": "Teste Alérgico Cutâneo de Leitura Imediata (Prick Test)",
+          "description": "Diagnóstico rápido para alergia a ácaros, fungos, pólens, pelos de animais e alimentos."
+        },
+        {
+          "@type": "MedicalTherapy",
+          "name": "Imunoterapia Específica com Alérgenos (Vacinas para Alergia)",
+          "description": "Tratamento de dessensibilização personalizado para controle duradouro de rinite alérgica e asma."
+        },
+        {
+          "@type": "MedicalProcedure",
+          "name": "Consulta Especializada em Alergia e Imunologia"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}#faq`,
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Onde fazer teste alérgico (Prick Test) em Copacabana, Rio de Janeiro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Clínica de Alergia Dr. Mauro Jorge realiza o teste alérgico cutâneo de leitura imediata (Prick Test) em Copacabana, Zona Sul do Rio de Janeiro, identificando sensibilidade a ácaros, fungos, pólens, animais e alimentos."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quais doenças alérgicas o Dr. Mauro Jorge trata em Copacabana?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O atendimento abrange rinite alérgica, asma brônquica, sinusite alérgica, dermatite atópica, dermatite de contato, urticária, alergias alimentares, alergia a medicamentos e imunoterapia (vacinas para alergia)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como agendar consulta na Clínica de Alergia Dr. Mauro Jorge?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Os agendamentos para consultas e testes alérgicos em Copacabana podem ser feitos diretamente pelo telefone ou WhatsApp oficial disponíveis no site da clínica."
+          }
+        }
+      ]
+    }
+  ]
+};
 ---
 
 <!doctype html>
@@ -15,8 +106,20 @@ const { title, description = "Clínica de Alergia Dr. Mauro Jorge - Copacabana, 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+    <link rel="canonical" href={canonicalURL} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
+
+    <!-- Open Graph / Compartilhamento e Leitura de IA -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+
+    <!-- Dados Estruturados GEO (Schema.org) -->
+    <script type="application/ld+json" set:html={JSON.stringify(geoSchema)} />
 
     <!-- Google Tag Manager -->
     <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':

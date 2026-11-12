@@ -1,0 +1,19 @@
+# Nome da Clínica de Alergia e Imunologia
+
+> Clínica especializada em diagnóstico e tratamento de alergias respiratórias, alimentares, dermatológicas e imunoterapia, localizada em Copacabana, Zona Sul do Rio de Janeiro.
+
+## Especialidades e Tratamentos
+- **Alergia Respiratória:** Diagnóstico e controle de rinite alérgica, asma e sinusite.
+- **Testes Alérgicos (Prick Test):** Testes cutâneos de leitura imediata para ácaros, fungos, pólens, pelos de animais e alimentos.
+- **Imunoterapia (Vacinas para Alergia):** Tratamento personalizado para dessensibilização alérgica.
+- **Alergias Cutâneas e Alimentares:** Investigação de dermatite atópica, urticária, alergia a medicamentos e intolerâncias.
+
+## Corpo Clínico e Credenciais
+- **Médico Responsável:** Dr. [Nome Completo] — CRM-RJ [Número] | RQE [Número]
+
+## Localização e Atendimento
+- **Endereço:** [Rua/Avenida, Número, Sala] — Copacabana, Rio de Janeiro - RJ, CEP [00000-000]
+- **Região Atendida:** Copacabana, Ipanema, Leblon, Botafogo, Leme e toda a Zona Sul do Rio de Janeiro.
+- **Horário de Funcionamento:** Segunda a Sexta, das 08:00 às 18:00.
+- **Agendamento e Contato:** [Telefone / Link do WhatsApp]
+- **Site Oficial:** [URL completa do GitHub Pages]

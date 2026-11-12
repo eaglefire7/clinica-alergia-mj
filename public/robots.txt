@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Rastreadores de Busca por IA (GEO)
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://SEU-USUARIO.github.io/NOME-DO-REPOSITORIO/sitemap-index.xml
