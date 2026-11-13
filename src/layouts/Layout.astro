@@ -9,11 +9,11 @@ interface Props {
 
 const {
   title,
-  description = "Clínica de Alergia Dr. Mauro Jorge - Especialista em Alergia e Imunologia em Copacabana, Zona Sul do Rio de Janeiro. Testes alérgicos (Prick Test), imunoterapia e tratamento de rinite, asma e dermatite.",
+  description = "Clínica de Alergia Dr. Mauro Jorge na Rua Edmundo Lins, 8 - Copacabana, RJ (ao lado do Metrô Siqueira Campos). Fundada em 1994, atendimento adulto e pediátrico, particular e convênios.",
   canonicalURL = Astro.url.href
 } = Astro.props;
 
-const siteUrl = "https://[PREENCHER-USUARIO].github.io/[PREENCHER-REPOSITORIO]/";
+const siteUrl = "https://www.clinicadealergiamj.com.br/";
 
 const geoSchema = {
   "@context": "https://schema.org",
@@ -22,25 +22,45 @@ const geoSchema = {
       "@type": ["MedicalClinic", "Physician"],
       "@id": `${siteUrl}#clinic`,
       "name": "Clínica de Alergia Dr. Mauro Jorge",
+      "foundingDate": "1994",
       "description": description,
       "url": siteUrl,
-      "telephone": "+55-21-[PREENCHER-TELEFONE]",
+      "logo": `${siteUrl}images/logo.webp`,
+      "image": `${siteUrl}images/clinica-lateral.webp`,
+      "telephone": "+55-21-2235-4549",
+      "email": "clinicadealergia.mj@uol.com.br",
       "medicalSpecialty": "AllergyAndImmunology",
-      "priceRange": "$$",
+      "hasMap": "https://g.co/kgs/Ca8CF1P",
       "founder": {
         "@type": "Person",
-        "name": "Dr. Mauro Jorge",
+        "name": "Dr. Mauro Roberto Nahuz Jorge",
         "jobTitle": "Médico Alergista e Imunologista",
-        "identifier": "CRM-RJ [PREENCHER-CRM] / RQE [PREENCHER-RQE]"
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Pontifícia Universidade Católica do Rio de Janeiro (PUC-RJ)"
+        }
       },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "[PREENCHER-RUA-NUMERO-SALA]",
+        "streetAddress": "Rua Edmundo Lins, 8",
         "addressLocality": "Rio de Janeiro",
         "addressRegion": "RJ",
-        "postalCode": "[PREENCHER-CEP]",
+        "postalCode": "22031-020",
         "addressCountry": "BR"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.9672,
+        "longitude": -43.1868
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:30"
+        }
+      ],
       "areaServed": [
         { "@type": "Neighborhood", "name": "Copacabana" },
         { "@type": "Neighborhood", "name": "Ipanema" },
@@ -50,20 +70,15 @@ const geoSchema = {
         { "@type": "City", "name": "Rio de Janeiro" }
       ],
       "availableService": [
-        {
-          "@type": "MedicalTest",
-          "name": "Teste Alérgico Cutâneo de Leitura Imediata (Prick Test)",
-          "description": "Diagnóstico rápido para alergia a ácaros, fungos, pólens, pelos de animais e alimentos."
-        },
-        {
-          "@type": "MedicalTherapy",
-          "name": "Imunoterapia Específica com Alérgenos (Vacinas para Alergia)",
-          "description": "Tratamento de dessensibilização personalizado para controle duradouro de rinite alérgica e asma."
-        },
-        {
-          "@type": "MedicalProcedure",
-          "name": "Consulta Especializada em Alergia e Imunologia"
-        }
+        { "@type": "MedicalProcedure", "name": "Consultas médicas em Alergia e Imunologia (Adulto e Pediátrico)" },
+        { "@type": "MedicalTest", "name": "Testes cutâneos de leitura imediata (Prick Test)" },
+        { "@type": "MedicalTest", "name": "Testes Intradérmicos" },
+        { "@type": "MedicalTest", "name": "Testes de Contato (Patch Test)" },
+        { "@type": "MedicalTherapy", "name": "Imunoterapia específica para alérgenos (Vacinas para Alergia)" }
+      ],
+      "sameAs": [
+        "https://g.co/kgs/Ca8CF1P",
+        "https://wa.me/message/IE4QW2RRY3PZC1"
       ]
     },
     {
@@ -72,26 +87,26 @@ const geoSchema = {
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Onde fazer teste alérgico (Prick Test) em Copacabana, Rio de Janeiro?",
+          "name": "Onde fica a Clínica de Alergia Dr. Mauro Jorge em Copacabana?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "A Clínica de Alergia Dr. Mauro Jorge realiza o teste alérgico cutâneo de leitura imediata (Prick Test) em Copacabana, Zona Sul do Rio de Janeiro, identificando sensibilidade a ácaros, fungos, pólens, animais e alimentos."
+            "text": "A clínica fica na Rua Edmundo Lins, 8, em Copacabana, Rio de Janeiro - RJ (CEP 22031-020), ao lado da Estação Metrô Siqueira Campos, com atendimento de segunda a sexta-feira, das 09:00h às 18:30h."
           }
         },
         {
           "@type": "Question",
-          "name": "Quais doenças alérgicas o Dr. Mauro Jorge trata em Copacabana?",
+          "name": "Quais convênios a Clínica de Alergia Dr. Mauro Jorge aceita?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "O atendimento abrange rinite alérgica, asma brônquica, sinusite alérgica, dermatite atópica, dermatite de contato, urticária, alergias alimentares, alergia a medicamentos e imunoterapia (vacinas para alergia)."
+            "text": "Além de atendimento particular, a clínica aceita Amil, Bradesco Saúde, SulAmérica Saúde, Unimed, Golden Cross, Porto Seguro Saúde, Saúde Caixa, CASSI, CABERJ Saúde, GEAP, NotreDame Intermédica, Mediservice, Prevent Senior, PASA, Vale, AMAFRERJ, CAMARJ, BC Saúde, IPALERJ Saúde e Mútua."
           }
         },
         {
           "@type": "Question",
-          "name": "Como agendar consulta na Clínica de Alergia Dr. Mauro Jorge?",
+          "name": "Quais exames e tratamentos de alergia são realizados na clínica?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Os agendamentos para consultas e testes alérgicos em Copacabana podem ser feitos diretamente pelo telefone ou WhatsApp oficial disponíveis no site da clínica."
+            "text": "Realizamos consultas médicas em Alergia e Imunologia (adulto e pediátrico), testes cutâneos de leitura imediata, testes intradérmicos, testes de contato e imunoterapia específica para alérgenos (vacinas para alergia)."
           }
         }
       ]
@@ -111,7 +126,7 @@ const geoSchema = {
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>{title}</title>
 
-    <!-- Open Graph / Compartilhamento e Leitura de IA -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:title" content={title} />

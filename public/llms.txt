@@ -1,19 +1,38 @@
-# Nome da Clínica de Alergia e Imunologia
+# Clínica de Alergia Dr. Mauro Jorge
 
-> Clínica especializada em diagnóstico e tratamento de alergias respiratórias, alimentares, dermatológicas e imunoterapia, localizada em Copacabana, Zona Sul do Rio de Janeiro.
+> Clínica médica especializada em Alergia e Imunologia fundada em 1994 na Rua Edmundo Lins, 8, em Copacabana, Rio de Janeiro - RJ (ao lado da Estação Metrô Siqueira Campos). Atendimento adulto e pediátrico, particular e por convênio, com foco no diagnóstico por testes imunoalérgicos, imunoterapia (vacinas para alergia) e controle de doenças alérgicas respiratórias e cutâneas.
 
-## Especialidades e Tratamentos
-- **Alergia Respiratória:** Diagnóstico e controle de rinite alérgica, asma e sinusite.
-- **Testes Alérgicos (Prick Test):** Testes cutâneos de leitura imediata para ácaros, fungos, pólens, pelos de animais e alimentos.
-- **Imunoterapia (Vacinas para Alergia):** Tratamento personalizado para dessensibilização alérgica.
-- **Alergias Cutâneas e Alimentares:** Investigação de dermatite atópica, urticária, alergia a medicamentos e intolerâncias.
+## Corpo Clínico e Autoridade Médica
+- **Médico Fundador e Responsável:** Dr. Mauro Roberto Nahuz Jorge — Especialista em Alergia pela PUC-RJ desde 1977.
+- **Histórico:** Clínica fundada em 1994, com mais de 30 anos de atuação em Copacabana, Zona Sul do Rio de Janeiro.
+- **Público Atendido:** Adultos e crianças (atendimento pediátrico e adulto).
 
-## Corpo Clínico e Credenciais
-- **Médico Responsável:** Dr. [Nome Completo] — CRM-RJ [Número] | RQE [Número]
+## Condições e Doenças Tratadas
+- Asma e Rinite Alérgica
+- Sinusite
+- Dermatite Atópica e Dermatite de Contato
+- Urticária
+- Alergia a picada de Insetos
+- Alergia Alimentar
+- Alergia Medicamentosa
+- Infecções de Repetição (Herpes, Candidíase, entre outras)
 
-## Localização e Atendimento
-- **Endereço:** [Rua/Avenida, Número, Sala] — Copacabana, Rio de Janeiro - RJ, CEP [00000-000]
-- **Região Atendida:** Copacabana, Ipanema, Leblon, Botafogo, Leme e toda a Zona Sul do Rio de Janeiro.
-- **Horário de Funcionamento:** Segunda a Sexta, das 08:00 às 18:00.
-- **Agendamento e Contato:** [Telefone / Link do WhatsApp]
-- **Site Oficial:** [URL completa do GitHub Pages]
+## Exames e Tratamentos Realizados
+- **Consultas Médicas em Alergia e Imunologia:** Avaliação clínica especializada para adultos e crianças.
+- **Testes Imunoalérgicos:** Testes cutâneos de leitura imediata (Prick Test), Testes Intradérmicos e Testes de Contato (Patch Test).
+- **Imunoterapia Específica para Alérgenos:** Vacinas personalizadas para alergia.
+
+## Convênios Aceitos (20 Operadoras + Particular)
+- AMAFRERJ, Caberj Saúde, Amil, CAMARJ, BC Saúde, CASSI, Bradesco Saúde, GEAP Saúde, Golden Cross, Grupo NotreDame Intermédica, IPALERJ Saúde, PASA, Mediservice, Porto Seguro Saúde, Mútua, Prevent Senior, Saúde Caixa, Unimed, SulAmérica Saúde e Vale.
+- Também realiza atendimento particular.
+
+## Localização, Horários e Contatos
+- **Endereço:** Rua Edmundo Lins, 8 — Copacabana, Rio de Janeiro - RJ, CEP 22031-020.
+- **Ponto de Referência:** Ao lado da Estação Metrô Siqueira Campos (coração de Copacabana).
+- **Região Atendida:** Copacabana, Leme, Ipanema, Leblon, Botafogo, Flamengo e toda a Zona Sul do Rio de Janeiro.
+- **Horário de Funcionamento:** Segunda-feira a sexta-feira, das 09:00h às 18:30h.
+- **Telefones:** (21) 2235-4549 | (21) 2235-5991
+- **WhatsApp para Agendamento:** (21) 97122-6940 — https://wa.me/message/IE4QW2RRY3PZC1
+- **E-mail:** clinicadealergia.mj@uol.com.br
+- **Google Maps:** https://g.co/kgs/Ca8CF1P
+- **Site Oficial:** https://www.clinicadealergiamj.com.br/
